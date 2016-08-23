@@ -7,7 +7,7 @@ Solo una aplicación ejemplo usando el framework Express JS de NodeJS.
 3. Correr la aplicación: <i># node app.js</i>
 4. Abrir el navegador e ir a <i>localhost:3000</i>
 
-# Dpendencias
+# Depndencias
 1. Mongoose
 2. Multer
 3. Body Parser
