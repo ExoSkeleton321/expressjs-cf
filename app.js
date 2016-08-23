@@ -9,9 +9,9 @@ var cloudinary = require("cloudinary");
 
 //config cloudinary
 cloudinary.config({ 
-  cloud_name: 'dhjxgsbe1', 
-  api_key: '721267265932689', 
-  api_secret: 'iYNFDifHkSjAcEqUCF-90qnNZFQ' 
+  cloud_name: 'xxxxxxx', 
+  api_key: 'xxxxxxxxx', 
+  api_secret: 'xxxxxx' 
 });
 
 //para poder leer imagenes desde un form con enctype y subirlas
