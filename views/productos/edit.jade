@@ -1,0 +1,25 @@
+//Use a layout (work so that various pages can use the same layout)
+extends ../layout.jade
+block contenido
+
+    div(class="col-md-5 center-block no-float top-space text-left")
+        h1 Editar Producto
+        form(method="post" action="/edit-product/#{product.id}" enctype="multipart/form-data" style="margin-top: 1.5em;")
+            div(class="form-group")
+                label Nombre
+                input(type="text" name="title" value="#{product.title}" placeholder="Nombre del producto" class="form-control")
+            div(class="form-group")
+                label Descripcion
+                textarea(name="decription" placeholder="Descripcion del producto" class="form-control")
+                    =product.description
+            div(class="form-group")
+                label Precio
+                input(type="Number" name="price" value="#{product.pricing}" placeholder="Precio del producto" class="form-control")
+            div(class="form-group")
+                label Imagen
+                input(type="file" name="image_avatar")
+            div(class="form-group")
+                label Contraseña
+                input(type="password" name="password" placeholder="Contraseña" class="form-control")
+            div(class="form-group text-right")
+                input(type="submit" class="btn btn-info" value="Guardar")

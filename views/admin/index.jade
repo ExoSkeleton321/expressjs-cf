@@ -1,0 +1,21 @@
+extends ../layout.jade
+block contenido
+	h1 Admin Panel
+	table(class="table table-striped")
+		thead
+			tr
+				th #
+				th Nombre
+				th Descripcion
+				th Precio
+				th Imagen
+				th Acciones
+		tbody
+			each product in products
+				tr
+					td= product.id
+					td= product.title
+					td= product.description
+					td= product.pricing
+					td #[a(href="#{product.imageUrl}" class="btn btn-primary") Ver Imagen]
+					td #[a(href="/productos/edit/#{product.id}") #[i(class="glyphicon glyphicon-pencil" style="color: blue; cursor: pointer;")]] &nbsp;&nbsp;&nbsp; #[a(href="/productos/eliminar/#{product.id}") #[i(class="glyphicon glyphicon-remove" style="color: red; cursor: pointer;")]]

@@ -1,0 +1,13 @@
+extends ../layout.jade
+block contenido
+	div(class="container")
+		h1 Productos
+		p Productos de calidad en tu alcance
+		//Same as foreach() in PHP
+		//Variable products was passed in from model (app.js)
+		div(class="row")
+			each product in products
+				div(class="col-md-4 col-sm-6 inline-block" style="outline: 1px solid #ccc;")
+					h3(style="font-style: italic;")= product.title
+					img(src="#{ product.imageUrl }" class="col-xs-7 col-md-4 no-float")
+					p(style="margin-top: 1em") #[small(class="lato small") $#{product.pricing.toFixed(2)} USD ]
